@@ -1,0 +1,59 @@
+@import 'mixings';
+
+.content-dua {
+    width: 100%;
+    padding: 25px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint (tablet) {
+        h2 {
+            font-size: 40px !important;
+        }
+    }
+
+    @include breakpoint(ipadPro) {
+        h2 {
+            font-size: 50px !important;
+        }
+
+        .happines {
+            position: relative;
+            right: 8%;
+        }
+    }
+
+    @include breakpoint(desktop) {
+        width: 1030px;
+        margin: auto;
+    }
+
+    .inner-content-dua {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+
+        h2 {
+            margin-top: -30px;
+            font-weight: 400;
+            width: 250px;
+            padding-bottom: 20px;
+        }
+
+        .happines {
+            color: rgb(25, 34, 53);
+            font-weight: 800;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+// breakpoint
+
+@mixin breakpoint ($point) {
+    @if $point==tablet {
+        @media screen and(min-width: 768px) {
+            @content;
+        }
+    }
+
+    @if $point==ipadPro {
+        @media screen and(min-width: 1024px) {
+            @content;
+        }
+    }
+
+    @if $point==iphone5 {
+        @media screen and (max-width: 320px) {
+            @content;
+        }
+    }
+
+    @if $point==nonPlushSeries {
+        @media screen and (max-width: 375px) {
+            @content;
+        }
+    }
+
+    @if $point==iphonePlushSeries {
+        @media screen and (max-width: 414px) {
+            @content;
+        }
+    }
+
+    @if $point==desktop {
+        @media screen and(min-width: 1100px) {
+            @content;
+        }
+    }
+
+    @if $point==largescreen {
+        @media screen and(min-width: 1700px) {
+            @content;
+        }
+    }
+
+    @if $point==adjustmentGallery {
+
+        @media screen and(min-width: 414px),
+        (max-width: 767px) {
+            @content;
+        }
+    }
+}

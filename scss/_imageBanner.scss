@@ -1,0 +1,167 @@
+@import 'mixings';
+
+
+.container {
+    width: 100%;
+
+    header {
+        display: none;
+    }
+
+    @include breakpoint(tablet) {
+        header {
+            margin-top: 60px;
+            display: inline-block;
+            width: 100%;
+            position: absolute;
+
+            .nav-list {
+                position: relative;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                padding: 20px;
+                z-index: 1;
+
+                ul {
+                    display: flex;
+                }
+
+                li {
+                    margin-left: 20px;
+                    list-style: none;
+                }
+
+                a {
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: #fff;
+                    font-family: 'montserrat';
+                    padding-bottom: 100px;
+                    font-weight: 100;
+
+                    &:hover {
+                        opacity: 0.8;
+                        border-bottom: 2px solid #fff;
+                    }
+                }
+            }
+        }
+
+        .wedding-info,
+        p,
+        .wedding-quotes,
+        span {
+            top: 250px !important;
+        }
+
+        .wedding-info {
+            font-size: 35px !important;
+        }
+
+        p,
+        .wedding-quotes {
+            font-size: 18px !important;
+            line-height: 1.5rem !important;
+        }
+    }
+
+    .image-banner {
+        width: 100%;
+        height: 100vh;
+        background: url(../img/bg1.jpg) no-repeat center center/cover;
+        color: #f1f1f1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3));
+            position: absolute;
+        }
+
+        .wedding-info,
+        p,
+        .wedding-quotes,
+        span {
+            position: relative;
+            top: 180px;
+            left: 0;
+            justify-content: flex-end;
+            z-index: 1;
+        }
+
+        .wedding-info {
+            padding-top: 10px;
+            font-size: 25px;
+            font-family: 'montserrat';
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        span,
+        img {
+            width: auto;
+            height: 87px;
+            padding-bottom: 10px;
+            border-bottom: 10px solid #fff;
+        }
+
+        p {
+            text-align: center;
+            text-transform: lowercase;
+            width: 300px;
+            line-height: 1rem;
+            font-size: 13px;
+            font-style: italic;
+        }
+
+        .wedding-quotes {
+            font-size: 13px;
+            font-weight: 100;
+            padding-top: 5px;
+        }
+    }
+
+    @include breakpoint(iphone5) {
+
+        .wedding-info,
+        p,
+        .wedding-quotes,
+        span {
+            top: 100px !important;
+        }
+
+        .wedding-info {
+            font-size: 22px !important;
+        }
+    }
+
+    @include breakpoint(tablet) {
+
+        .wedding-info,
+        p,
+        .wedding-quotes,
+        span {
+            top: 170px !important;
+        }
+    }
+
+    @include breakpoint(largescreen) {
+
+        .wedding-info,
+        p,
+        .wedding-quotes,
+        span {
+            top: 200px !important;
+        }
+    }
+
+}

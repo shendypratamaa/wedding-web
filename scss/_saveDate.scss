@@ -1,0 +1,120 @@
+@import 'mixings';
+
+.date {
+    width: 100%;
+    background-color: rgb(25, 34, 53);
+    box-sizing: border-box;
+
+    @include breakpoint(tablet) {
+        margin-top: -60px;
+    }
+
+    @include breakpoint(desktop) {
+
+        .inner-date {
+            padding: 50px !important;
+
+        }
+
+        width: 1030px !important;
+        margin: auto;
+        margin-top: -80px !important;
+    }
+
+    .inner-date {
+        color: #fff;
+
+        @include breakpoint(tablet) {
+            margin-top: 85px;
+
+            .info-date {
+                width: 400px;
+                font-size: 60px !important;
+            }
+
+            .date-count {
+                width: 400px;
+                margin: auto;
+                font-size: 30px !important;
+            }
+
+            .wedding-info {
+                font-size: 30px;
+            }
+
+            li {
+                display: flex;
+                font-size: 25px;
+            }
+        }
+
+        .info-date {
+            font-size: 50px;
+            font-family: 'Montserrat';
+            padding: 20px;
+
+            &:after {
+                content: '';
+                border-bottom: 2px solid #fff;
+                display: block;
+                width: 100px;
+                padding: 10px;
+            }
+        }
+
+        .wedding-info {
+            font-family: 'montserrat';
+            font-weight: 400;
+            padding: 0 20px 10px;
+        }
+
+        ul {
+            padding: 20px;
+        }
+
+        li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            font-family: 'montserrat';
+            line-height: 1.5rem;
+        }
+
+        i {
+            font-size: 30px;
+            padding: 5px 25px 10px 0px;
+        }
+
+
+        .date-count {
+            font-size: 30px;
+            font-family: 'Montserrat';
+            text-align: center;
+            padding: 10px;
+
+            &:after {
+                content: '';
+                width: 100px;
+                padding: 10px;
+                display: block;
+                border-bottom: 2px solid #fff;
+                margin: auto;
+            }
+        }
+
+        .date-wedding-container {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+
+            h2 {
+                width: 70px;
+                font-size: 30px;
+                font-family: 'montserrat';
+                font-weight: 400;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}

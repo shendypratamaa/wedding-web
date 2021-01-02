@@ -1,0 +1,80 @@
+@import 'mixings';
+
+.content-tiga {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .name-info {
+        font-size: 40px;
+        font-family: 'Pacifico';
+        text-align: center;
+        padding: 0px;
+        color: rgb(25, 34, 53);
+    }
+
+    .names {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0;
+        align-items: center;
+        color: rgb(25, 34, 53);
+
+        .p-info {
+            font-size: 20px;
+            font-family: 'pacifico';
+        }
+
+        p {
+            font-family: 'montserrat';
+            padding: 3px;
+            font-size: 14px;
+            font-weight: 100;
+        }
+
+        ul {
+            display: flex;
+            padding-top: 5px;
+            margin-right: 10px;
+        }
+
+        li {
+            list-style: none;
+            padding-left: 8px;
+            padding-bottom: 20px;
+        }
+
+        a {
+            color: rgb(25, 34, 53);
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        i {
+            font-size: 25px;
+        }
+
+        img {
+            cursor: pointer;
+            margin-left: 5px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 5px 10px rgb(25, 34, 53);
+            border: 8px solid rgb(25, 34, 53);
+        }
+    }
+
+    @include breakpoint(tablet) {
+        .p-info {
+            font-size: 30px !important;
+        }
+
+        p {
+            font-size: 18px !important;
+        }
+    }
+}

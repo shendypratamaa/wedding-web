@@ -1,0 +1,48 @@
+@import 'mixings';
+
+.video-content {
+    box-sizing: border-box;
+    margin: auto;
+
+    .info-vid {
+        font-size: 50px;
+        font-family: 'pacifico';
+        text-align: center;
+        padding: 12px 0 20px 0;
+        color: rgb(25, 34, 53);
+    }
+
+    .inner-video-satu {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 10px;
+        height: 0px;
+    }
+
+    .inner-video-dua {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 10px;
+        height: 0px;
+    }
+
+    iframe {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        height: 100%;
+        width: 100%;
+    }
+
+    @include breakpoint(desktop) {
+        width: 54% !important;
+    }
+
+    @include breakpoint(iphone5) {
+        .info-vid {
+            font-size: 35px !important;
+        }
+    }
+}

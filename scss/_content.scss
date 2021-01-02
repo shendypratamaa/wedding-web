@@ -1,0 +1,43 @@
+@import 'mixings';
+
+.content-satu {
+    font-size: 20px;
+    padding: 25px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+        margin-top: -10px;
+
+        h2 {
+            font-size: 40px !important;
+        }
+    }
+
+    @include breakpoint(ipadPro) {
+        h2 {
+            font-size: 50px !important;
+        }
+    }
+
+    @include breakpoint(desktop) {
+        width: 1030px;
+        margin: auto;
+    }
+
+    h2 {
+        font-weight: 400;
+        width: 250px;
+    }
+
+    .Happines {
+        color: rgb(25, 34, 53);
+        font-weight: 1000 !important;
+    }
+
+    img {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
